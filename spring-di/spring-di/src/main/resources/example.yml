@@ -1,0 +1,35 @@
+# this is a comment
+name: John
+
+names: #Comment
+  - John
+  - Paul
+  - Ringo
+
+pound_sign: "#"
+
+book:
+    author: Joe Buck
+    publisher: random house
+
+truth: yes
+
+another_Truth: True
+
+more_true: true
+
+false: no #No, false, FALSE
+
+string_val: "This is it's quote"
+
+colon_string: "My courses: one two three"
+
+include_new_lines: |
+  asdf asdf asdf
+  asdf asdf asdf
+  asdf asdf asdf
+
+ignore_new_lines: >
+  this is
+  just one long
+  string

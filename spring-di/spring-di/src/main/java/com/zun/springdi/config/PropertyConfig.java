@@ -2,28 +2,23 @@ package com.zun.springdi.config;
 
 import com.zun.springdi.examplebeans.FakeDataSource;
 import com.zun.springdi.examplebeans.FakeJmsBroker;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.PropertySources;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.core.env.Environment;
 
 @Configuration
 //@PropertySource({
 //        "classpath:datasource.properties",
 //        "classpath:jms.properties"
 //})
-@PropertySources({
-        @PropertySource("classpath:datasource.properties"),
-        @PropertySource("classpath:jms.properties")
-})
+//@PropertySources({
+//        @PropertySource("classpath:datasource.properties"),
+//        @PropertySource("classpath:jms.properties")
+//})
 public class PropertyConfig {
 
-    @Autowired
-    Environment env;
+//    @Autowired
+//    Environment env;
 
     @Value("${zun.username}")
     String user;
@@ -40,15 +35,16 @@ public class PropertyConfig {
     @Value("${zun.jms.password}")
     String jmsPassword;
 
-    @Value("${zun.jms.dburl}")
+    @Value("${zun.jms.url}")
     String jmsUrl;
 
     @Bean
     public FakeDataSource fakeDataSource(){
         FakeDataSource fakeDataSource = new FakeDataSource();
-        fakeDataSource.setPassword(env.getProperty("USERNAME"));
+        fakeDataSource.setPassword(password);
         fakeDataSource.setUrl(url);
         fakeDataSource.setUsername(user);
+//        fakeDataSource.setUsername(env.getProperty("USERNAME"));
         return fakeDataSource;
     }
 
@@ -61,9 +57,9 @@ public class PropertyConfig {
         return fakeJmsBroker;
     }
 
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer properties(){
-        return new PropertySourcesPlaceholderConfigurer();
-    }
+//    @Bean
+//    public static PropertySourcesPlaceholderConfigurer properties(){
+//        return new PropertySourcesPlaceholderConfigurer();
+//    }
 
 }

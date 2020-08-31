@@ -1,0 +1,13 @@
+zun:
+  jms:
+    username: JMS Username
+    password: somepass
+    url: SomeURL
+
+---
+spring:
+  profiles: es
+
+zun:
+  jms:
+    username: Zun
