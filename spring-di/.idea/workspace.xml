@@ -2,6 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1b90e0f-ab7d-478c-bdc2-2e5c70826567" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../recipes/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipes/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipes/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipes/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipes/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipes/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipes/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipes/src/main/java/com/zun/recipes/RecipesApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipes/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../recipes/src/test/java/com/zun/recipes/RecipesApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-di/src/main/resources/application-es.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-di/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-di/src/main/resources/example.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-di/src/main/java/com/zun/springdi/config/PropertyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-di/src/main/java/com/zun/springdi/config/PropertyConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-di/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-di/src/main/resources/application.properties" afterDir="false" />
@@ -360,7 +373,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17826618" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
