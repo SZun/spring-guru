@@ -26,4 +26,9 @@ public class RecipeServiceImpl implements RecipeService {
         recipeRepository.findAll().iterator().forEachRemaining(toReturn::add);
         return toReturn;
     }
+
+    @Override
+    public Recipe findById(Long id) {
+        return recipeRepository.findById(id).orElseThrow(() -> new RuntimeException("No Recipe Found"));
+    }
 }

@@ -62,7 +62,7 @@ class IndexControllerTest {
         String res = indexController.getIndexPage(model);
         assertEquals("index", res);
         verify(recipeService, times(1)).getRecipes();
-        verify(model, times(1)).addAttribute(eq("recipes"), argumentCaptor.capture());
+        verify(model, times(1)).addAttribute(eq("recipe"), argumentCaptor.capture());
         assertEquals(2, argumentCaptor.getValue().size());
     }
 }
