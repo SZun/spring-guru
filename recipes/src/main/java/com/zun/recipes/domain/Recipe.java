@@ -51,5 +51,4 @@ public class Recipe {
     protected boolean canEqual(final Object other) {
         return other instanceof Recipe;
     }
-
 }
