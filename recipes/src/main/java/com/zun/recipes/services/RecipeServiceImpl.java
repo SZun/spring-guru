@@ -4,6 +4,7 @@ import com.zun.recipes.commands.RecipeCommand;
 import com.zun.recipes.converters.RecipeCommandToRecipe;
 import com.zun.recipes.converters.RecipeToRecipeCommand;
 import com.zun.recipes.domain.Recipe;
+import com.zun.recipes.exceptions.NotFoundException;
 import com.zun.recipes.repositories.RecipeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -37,7 +38,7 @@ public class RecipeServiceImpl implements RecipeService {
 
     @Override
     public Recipe findById(Long id) {
-        return recipeRepository.findById(id).orElseThrow(() -> new RuntimeException("Recipe Not Found!"));
+        return recipeRepository.findById(id).orElseThrow(() -> new NotFoundException("Recipe Not Found For Id=" + id));
     }
 
     @Override

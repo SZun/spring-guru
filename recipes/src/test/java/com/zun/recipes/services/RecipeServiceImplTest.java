@@ -1,6 +1,7 @@
 package com.zun.recipes.services;
 
 import com.zun.recipes.domain.Recipe;
+import com.zun.recipes.exceptions.NotFoundException;
 import com.zun.recipes.repositories.RecipeRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,8 +13,7 @@ import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -57,5 +57,10 @@ class RecipeServiceImplTest {
     void testDeleteById() {
         recipeService.deleteById(2L);
         verify(recipeRepository, times(1)).deleteById(anyLong());
+    }
+
+    @Test
+    void getRecipeByIdNotFound() {
+        assertThrows(NotFoundException.class, () -> recipeService.findById(1L));
     }
 }
